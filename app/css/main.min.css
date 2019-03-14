@@ -1,19 +1,59 @@
 @charset "UTF-8";
 /* fonts */
-/* Пусть к файлу шрифта */
+/* Путь к файлу шрифта */
+@font-face {
+  font-family: "roboto";
+  font-weight: 300;
+  font-style: normal;
+  src: url("../fonts/ProximaNovaLight/.eot");
+  src: url("../fonts/ProximaNovaLight/.eot?#iefix") format("embedded-opentype"), url("../fonts/ProximaNovaLight/.woff") format("woff"), url("../fonts/ProximaNovaLight/.ttf") format("truetype"); }
+
 @font-face {
   font-family: "roboto";
   font-weight: 400;
   font-style: normal;
-  src: url("../fonts/RobotoRegular/RobotoRegular.eot");
-  src: url("../fonts/RobotoRegular/RobotoRegular.eot?#iefix") format("embedded-opentype"), url("../fonts/RobotoRegular/RobotoRegular.woff") format("woff"), url("../fonts/RobotoRegular/RobotoRegular.ttf") format("truetype"); }
+  src: url("../fonts/ProximaNovaRegular/.eot");
+  src: url("../fonts/ProximaNovaRegular/.eot?#iefix") format("embedded-opentype"), url("../fonts/ProximaNovaRegular/.woff") format("woff"), url("../fonts/ProximaNovaRegular/.ttf") format("truetype"); }
+
+@font-face {
+  font-family: "roboto";
+  font-weight: 600;
+  font-style: normal;
+  src: url("../fonts/ProximaNovaSemibold/.eot");
+  src: url("../fonts/ProximaNovaSemibold/.eot?#iefix") format("embedded-opentype"), url("../fonts/ProximaNovaSemibold/.woff") format("woff"), url("../fonts/ProximaNovaSemibold/.ttf") format("truetype"); }
 
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box; }
 
+body {
+  font-family: "Proxima Nova light", sans-serif; }
+
 .container {
   max-width: 1170px;
   margin: auto; }
+
+.navbar-wrap {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 80px; }
+
+.menu-button {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: transparent;
+  border: none;
+  border-right: 1px solid #510bba;
+  border-left: 1px solid #510bba;
+  height: 80px;
+  width: 70px; }
 
 /* media query */
