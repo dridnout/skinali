@@ -66,7 +66,8 @@ body {
 
 @media (max-width: 576px) {
   .button-o {
-    font-size: 10px; }
+    font-size: 10px;
+    padding: 10px 14px; }
   .menu-button {
     height: 60px; } }
 
@@ -117,21 +118,23 @@ body {
   -webkit-transform: translateY(-100%);
       -ms-transform: translateY(-100%);
           transform: translateY(-100%);
-  -webkit-transition: -webkit-transform 0.2s ease-in;
-  transition: -webkit-transform 0.2s ease-in;
-  -o-transition: transform 0.2s ease-in;
-  transition: transform 0.2s ease-in;
-  transition: transform 0.2s ease-in, -webkit-transform 0.2s ease-in; }
+  opacity: 0;
+  -webkit-transition: opacity 0.2s ease-in,-webkit-transform 0.2s ease-in;
+  transition: opacity 0.2s ease-in,-webkit-transform 0.2s ease-in;
+  -o-transition: transform 0.2s ease-in,opacity 0.2s ease-in;
+  transition: transform 0.2s ease-in,opacity 0.2s ease-in;
+  transition: transform 0.2s ease-in,opacity 0.2s ease-in,-webkit-transform 0.2s ease-in; }
   .menu_active {
     z-index: 0;
     -webkit-transform: translateY(0%);
         -ms-transform: translateY(0%);
             transform: translateY(0%);
-    -webkit-transition: -webkit-transform 0.2s ease-in;
-    transition: -webkit-transform 0.2s ease-in;
-    -o-transition: transform 0.2s ease-in;
-    transition: transform 0.2s ease-in;
-    transition: transform 0.2s ease-in, -webkit-transform 0.2s ease-in; }
+    opacity: 1;
+    -webkit-transition: opacity 0.2s ease-in,-webkit-transform 0.2s ease-in;
+    transition: opacity 0.2s ease-in,-webkit-transform 0.2s ease-in;
+    -o-transition: transform 0.2s ease-in,opacity 0.2s ease-in;
+    transition: transform 0.2s ease-in,opacity 0.2s ease-in;
+    transition: transform 0.2s ease-in,opacity 0.2s ease-in,-webkit-transform 0.2s ease-in; }
   .menu__nav {
     display: -webkit-box;
     display: -webkit-flex;
@@ -219,14 +222,19 @@ body {
       text-align: center; } }
 
 @media (max-width: 576px) {
+  .navbar-wrap {
+    min-height: 60px; }
+  .menu-button {
+    height: 60px; }
   .logo {
     display: none; } }
 
 .hero {
-  background: #f1f1f1 url(../img/hero-bg.jpg) center top 80px no-repeat;
+  background: #f1f1f1 url(../img/hero-bg.jpg) center top no-repeat;
   -webkit-background-size: contain;
           background-size: contain;
-  padding: 160px 0 270px 0; }
+  padding: 160px 0 270px 0;
+  margin-top: 80px; }
   .hero__title {
     max-width: 262px;
     font-size: 30px;
@@ -241,7 +249,8 @@ body {
   .hero {
     -webkit-background-size: cover;
             background-size: cover;
-    background-position: top 60px left 30%;
-    height: 600px; } }
+    background-position: top left 30%;
+    height: 600px;
+    margin-top: 60px; } }
 
 /* media query */
