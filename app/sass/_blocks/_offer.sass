@@ -20,7 +20,7 @@
         display: flex
         align-items: center
         max-width: 900px
-        margin-bottom: 25px
+        margin-bottom: 20px
         &:last-child
             margin-bottom: 0
     &__label
@@ -64,7 +64,7 @@
         &-block
             background: none
             background-color: #fff
-            padding: 40px
+            padding: 20px
         &__title
             font-size: 17px
         &__subtitle
@@ -77,5 +77,17 @@
         &__group
             flex-basis: 100%
             width: 100%
+            &:last-of-type
+                .form__input
+                    margin-bottom: 0
         &__input
             margin-bottom: 20px
+            height: 60px
+            border-right-width: 1px
+        &__button
+            height: 60px    
+    .checkbox
+        &-label
+            margin-right: 15px
+            &:before
+                margin-right: 15px
