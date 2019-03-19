@@ -26,6 +26,9 @@
   -webkit-box-sizing: border-box;
           box-sizing: border-box; }
 
+img {
+  max-width: 100%; }
+
 body {
   font-family: "ProximaNova light", sans-serif;
   color: #262626; }
@@ -83,6 +86,19 @@ body {
   text-transform: uppercase;
   padding: 25px 45px;
   font-family: "ProximaNova Semibold", sans-serif; }
+  .button-fitting {
+    background-color: #fff;
+    color: #507fe1;
+    padding: 10px; }
+  .button-add {
+    background-color: #7c9fe8;
+    color: #fff;
+    padding: 10px; }
+  .button-like {
+    background-color: #507fe1;
+    padding: 8px;
+    height: 30px;
+    width: 30px; }
 
 @media (max-width: 576px) {
   .button-o {
@@ -430,5 +446,71 @@ body {
     .section-title {
       font-size: 24px;
       margin-bottom: 80px; } }
+
+.catalog-block {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap; }
+
+.catalog__card {
+  margin-bottom: 30px; }
+
+.catalog-card {
+  -webkit-flex-basis: 50%;
+      -ms-flex-preferred-size: 50%;
+          flex-basis: 50%;
+  position: relative;
+  max-width: 570px;
+  -webkit-box-shadow: 7px 5px 21px rgba(0, 0, 0, 0.1);
+          box-shadow: 7px 5px 21px rgba(0, 0, 0, 0.1); }
+  .catalog-card__buttons {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex; }
+  .catalog-card__button {
+    text-transform: uppercase;
+    border: none;
+    font-size: 11px;
+    height: 30px; }
+  .catalog-card__tag {
+    position: absolute;
+    display: block;
+    top: 10px;
+    left: 10px;
+    font-size: 12px;
+    text-transform: uppercase;
+    color: #fff;
+    background-color: rgba(80, 127, 225, 0.6);
+    padding: 10px; }
+  .catalog-card__image {
+    display: block; }
+
+@media (max-width: 1199px) {
+  .catalog-card {
+    max-width: 470px; } }
+
+@media (max-width: 991px) {
+  .catalog-block {
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center; }
+  .catalog-card {
+    max-width: 570px;
+    -webkit-flex-basis: 100%;
+        -ms-flex-preferred-size: 100%;
+            flex-basis: 100%; } }
 
 /* media query */
