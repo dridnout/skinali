@@ -1,0 +1,51 @@
+.blog
+    &__heading
+        display: flex
+        justify-content: space-between
+        align-items: center
+        flex-wrap: wrap
+        margin-bottom: 70px
+    &__title
+        font-size: 24px
+        +bold
+    &__link-more
+        color: $primary
+        font-size: 16px
+    &-list
+        display: flex
+        justify-content: space-between
+        align-items: center
+        flex-wrap: wrap
+        &__card
+            margin-bottom: 20px
+    &-card
+        box-shadow: 0 5px 10px rgba(0,0,0,.08)
+        &__image
+            max-height: 200px
+            overflow: hidden
+        &__text
+            display: flex
+            justify-content: center
+            align-items: center
+            min-height: 80px
+@media (max-width: 1199px)
+    .blog
+        &-card
+            &__image
+                max-height: 150px
+@media (max-width: 991px)
+    .blog
+        &-card
+            &__image
+                max-height: 130px
+@media (max-width: 768px)
+    .blog
+        &-list
+            justify-content: space-around
+        &-card
+            &__image
+                max-height: 200px
+@media (max-width: 600px)
+    .blog
+        &-list
+            justify-content: center
