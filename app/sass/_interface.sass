@@ -15,6 +15,8 @@
     padding: 25px 45px
     text-decoration: none
     +bold
+    &:hover
+        cursor: pointer
     &-fitting
         background-color: #fff
         color: $primary
@@ -30,9 +32,11 @@
         width: 30px
 
 @media (max-width: 576px)
-    .button-o
+    .button
         font-size: 10px
-        padding: 10px 14px
+        &-o
+            font-size: 10px
+            padding: 10px 14px
     .menu
         &-button
             height: 60px
