@@ -655,7 +655,9 @@ body {
 
 .price-card {
   background-color: #fff;
-  position: relative; }
+  position: relative;
+  -webkit-box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1); }
   .price-card__text {
     padding: 20px;
     font-size: 15px; }
@@ -676,8 +678,6 @@ body {
   .price-card__button {
     text-align: center;
     position: absolute;
-    -webkit-box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
-            box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
     height: 80px;
     bottom: 0;
     left: 0;
@@ -687,10 +687,12 @@ body {
     padding-top: 0;
     z-index: -1; }
   .price-card:hover .price-card__button {
+    -webkit-box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
     z-index: 99;
     bottom: -80px; }
 
-@media (max-width: 991px) {
+@media (max-width: 1199px) {
   .price-block {
     -webkit-box-pack: center;
     -webkit-justify-content: center;
@@ -703,5 +705,58 @@ body {
   .price-block {
     margin: 0;
     margin-bottom: 10px; } }
+
+.step {
+  text-align: center;
+  position: relative; }
+  .step:before {
+    content: '';
+    height: 2px;
+    width: 100%;
+    display: block;
+    position: absolute;
+    top: 27%;
+    left: 63%;
+    background-color: rgba(126, 123, 120, 0.9); }
+  .step:last-of-type:before {
+    content: none; }
+  .step__text {
+    max-width: 160px;
+    margin: auto; }
+  .step__title {
+    font-size: 18px; }
+  .steps {
+    background-color: #f1f1f1; }
+    .steps-block {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: justify;
+      -webkit-justify-content: space-between;
+          -ms-flex-pack: justify;
+              justify-content: space-between;
+      -webkit-flex-wrap: wrap;
+          -ms-flex-wrap: wrap;
+              flex-wrap: wrap; }
+
+@media (max-width: 1199px) {
+  .step:before {
+    width: 90%; } }
+
+@media (max-width: 991px) {
+  .step {
+    -webkit-flex-basis: 33%;
+        -ms-flex-preferred-size: 33%;
+            flex-basis: 33%;
+    margin-bottom: 30px; }
+    .step:before {
+      content: none; } }
+
+@media (max-width: 768px) {
+  .step {
+    -webkit-flex-basis: 100%;
+        -ms-flex-preferred-size: 100%;
+            flex-basis: 100%; } }
 
 /* media query */

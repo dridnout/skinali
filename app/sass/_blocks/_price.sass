@@ -8,6 +8,7 @@
     &-card
         background-color: #fff
         position: relative
+        box-shadow: 0 5px 5px rgba(0,0,0,.1)
         &__text
             padding: 20px 
             font-size: 15px 
@@ -22,7 +23,6 @@
         &__button
             text-align: center
             position: absolute
-            box-shadow: 0 5px 5px rgba(0,0,0,.1)
             height: 80px
             bottom: 0
             left: 0 
@@ -33,10 +33,10 @@
             z-index: -1 
         &:hover
             .price-card__button
+                box-shadow: 0 5px 5px rgba(0,0,0,.1)
                 z-index: 99 
                 bottom: -80px 
-
-@media (max-width: 991px)
+@media (max-width: 1199px)
     .price
         &-block
             justify-content: center
