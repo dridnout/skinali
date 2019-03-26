@@ -774,7 +774,7 @@ body {
       display: block;
       width: 70px;
       height: 70px;
-      margin: 20px auto;
+      margin: 40px auto 20px;
       -webkit-border-radius: 50%;
               border-radius: 50%;
       overflow: hidden;
@@ -786,6 +786,22 @@ body {
       font-style: italic;
       max-width: 370px;
       padding: 20px;
-      background-color: #fff; }
+      background-color: #fff;
+      -webkit-border-radius: 10px;
+              border-radius: 10px;
+      position: relative; }
+      .reviews-slider__text:after {
+        content: '';
+        display: block;
+        position: absolute;
+        bottom: -10px;
+        left: 0;
+        right: 0;
+        margin: auto;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 10px 10px 0 10px;
+        border-color: #ffffff transparent transparent transparent; }
 
 /* media query */
