@@ -298,14 +298,22 @@ body {
 
 .offer {
   padding: 129px 0; }
+  .offer_price {
+    padding: 0; }
   .offer-block {
-    background: #fff url(../img/offer-bg.png) no-repeat center right;
-    -webkit-background-size: contain;
-            background-size: contain;
     padding: 80px;
     margin-top: -215px;
     -webkit-box-shadow: 0 15px 25px rgba(0, 0, 0, 0.1);
             box-shadow: 0 15px 25px rgba(0, 0, 0, 0.1); }
+    .offer-block_calc-bg {
+      background: #fff url(../img/offer-bg.png) no-repeat center right;
+      -webkit-background-size: contain;
+              background-size: contain; }
+    .offer-block_price-bg {
+      background: #fff url(../img/offer-bg-2.png) no-repeat center right;
+      -webkit-background-size: contain;
+              background-size: contain;
+      margin-top: -200px; }
   .offer__title {
     font-size: 25px;
     text-transform: uppercase;
@@ -314,7 +322,8 @@ body {
   .offer__subtitle {
     display: block;
     font-size: 21px;
-    margin-bottom: 48px; }
+    margin-bottom: 48px;
+    max-width: 800px; }
 
 .form__row {
   display: -webkit-box;
@@ -350,6 +359,11 @@ body {
   height: 80px;
   width: 100%; }
 
+.form__policy {
+  display: inline-block;
+  margin-left: 45px;
+  font-size: 17px; }
+
 .checkbox {
   display: none; }
   .checkbox:checked + .checkbox-label:before {
@@ -378,10 +392,13 @@ body {
   .offer-block {
     background-position: center right -120px; } }
 
-@media (max-width: 768px) {
+@media (max-width: 991px) {
   .offer-block {
     background: none;
-    background-color: #fff;
+    background-color: #fff; } }
+
+@media (max-width: 768px) {
+  .offer-block {
     padding: 20px; }
   .offer__title {
     font-size: 17px; }
@@ -412,6 +429,9 @@ body {
     border-right-width: 1px; }
   .form__button {
     height: 60px; }
+  .form__policy {
+    margin-top: 20px;
+    margin-left: 0; }
   .checkbox-label {
     margin-right: 15px; }
     .checkbox-label:before {
@@ -760,7 +780,8 @@ body {
             flex-basis: 100%; } }
 
 .reviews {
-  background-color: #f5f6f8; }
+  background-color: #f5f6f8;
+  padding-bottom: 280px; }
   .reviews-slider {
     display: -webkit-box;
     display: -webkit-flex;
@@ -803,5 +824,35 @@ body {
         border-style: solid;
         border-width: 10px 10px 0 10px;
         border-color: #ffffff transparent transparent transparent; }
+
+.factory-block {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: space-around;
+      -ms-flex-pack: distribute;
+          justify-content: space-around; }
+  .factory-block__image {
+    margin: 20px 0; }
+  .factory-block__text {
+    -webkit-flex-basis: 50%;
+        -ms-flex-preferred-size: 50%;
+            flex-basis: 50%;
+    font-size: 20px; }
+
+@media (max-width: 991px) {
+  .factory-block {
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center; }
+    .factory-block__text {
+      -webkit-flex-basis: 100%;
+          -ms-flex-preferred-size: 100%;
+              flex-basis: 100%; } }
 
 /* media query */

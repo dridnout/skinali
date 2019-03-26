@@ -1,0 +1,16 @@
+.factory
+    &-block
+        display: flex
+        justify-content: space-around
+        &__image
+            margin: 20px 0
+        &__text
+            flex-basis: 50%
+            font-size: 20px
+@media (max-width: 991px)
+    .factory
+        &-block
+            flex-wrap: wrap
+            justify-content: center
+            &__text
+                flex-basis: 100%

@@ -1,11 +1,18 @@
 .offer
     padding: 129px 0
+    &_price
+        padding: 0
     &-block
-        background: #fff url(../img/offer-bg.png) no-repeat center right
-        background-size: contain
         padding: 80px
         margin-top: -215px
         box-shadow: 0 15px 25px rgba(0,0,0,.1)
+        &_calc-bg
+            background: #fff url(../img/offer-bg.png) no-repeat center right
+            background-size: contain
+        &_price-bg
+            background: #fff url(../img/offer-bg-2.png) no-repeat center right
+            background-size: contain
+            margin-top: -200px
     &__title
         font-size: 25px
         text-transform: uppercase
@@ -15,6 +22,7 @@
         display: block
         font-size: 21px
         margin-bottom: 48px
+        max-width: 800px
 .form
     &__row
         display: flex
@@ -38,6 +46,10 @@
     &__button
         height: 80px
         width: 100%
+    &__policy
+        display: inline-block
+        margin-left: 45px
+        font-size: 17px
 .checkbox
     display: none
     &:checked + .checkbox-label:before
@@ -59,11 +71,14 @@
     .offer
         &-block
             background-position: center right -120px
-@media (max-width: 768px)
+@media (max-width: 991px)
     .offer
         &-block
             background: none
             background-color: #fff
+@media (max-width: 768px)
+    .offer
+        &-block
             padding: 20px
         &__title
             font-size: 17px
@@ -85,7 +100,10 @@
             height: 60px
             border-right-width: 1px
         &__button
-            height: 60px    
+            height: 60px   
+        &__policy
+            margin-top: 20px
+            margin-left: 0 
     .checkbox
         &-label
             margin-right: 15px
