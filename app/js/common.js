@@ -62,8 +62,20 @@ function modal(id) {
             modal.classList.remove('modal_active');
             document.body.removeChild(overflow);
 		}
-	};
+    };
+    
+    
 }
+var reviews = $('.reviews');
+var reviewsTop = reviews.offset().top;
+$(window).bind('scroll', function(){
+    var windowTop = $(this).scrollTop();
+    if(windowTop > reviewsTop) {
+        console.log('Докрутили');
+        $('#map').html('<script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A5c6c9c21f7106ae24ad9e8edd13e764db58da541d6a2920e38a521512fd8cf0d&amp;width=100%25&amp;height=450&amp;lang=ru_RU&amp;scroll=false"></script>');
+        $(window).unbind('scroll');
+    }
+});
 
 // получить data аттрибут от элемента по событию click 
 function getTarget(){
