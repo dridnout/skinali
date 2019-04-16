@@ -10,12 +10,20 @@
         flex-basis: 50%
         position: relative
         max-width: 570px
+        overflow: hidden
         box-shadow: 7px 5px 21px rgba(0,0,0,.1)
+        &:hover
+            .catalog-card__buttons
+                opacity: 1
+                transform: translateY(0)
         &__buttons
             position: absolute
             bottom: 0
             right: 0
             display: flex
+            opacity: 0
+            transform: translateY(100%)
+            transition: opacity 0.2s, transform 0.2s
         &__button
             text-transform: uppercase
             border: none

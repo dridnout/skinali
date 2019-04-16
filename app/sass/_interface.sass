@@ -1,3 +1,5 @@
+button
+    cursor: pointer
 .button-o
     border: 2px solid $primary
     padding: 17px 22px
@@ -30,7 +32,46 @@
         padding: 8px
         height: 30px
         width: 30px
-
+.select
+    width: 100%
+    height: 80px
+    border-width: 1px
+    border-style: solid
+    border-color: #dddddd
+    position: relative
+    &:after
+        content: ''
+        position: absolute
+        top: 0
+        bottom: 0
+        right: 20px
+        margin: auto
+        width: 20px
+        height: 20px
+        display: block
+        background: url(../img/caret.png) no-repeat center
+    &:hover
+        cursor: pointer
+    &_checked
+        line-height: 80px
+        padding: 0 30px
+    &__dropdown
+        list-style: none
+        padding: 0
+        margin: 0
+        position: absolute
+        left: -1px
+        top: 78px
+        width: calc(100% + 2px)
+        background-color: #fff
+        border: 1px solid #dddddd
+        display: none
+        &_open
+            display: block
+    &__option
+        padding: 20px 30px
+        &:hover
+            background-color: $bg-secondary
 @media (max-width: 576px)
     .button
         font-size: 10px

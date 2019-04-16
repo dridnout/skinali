@@ -1,15 +1,10 @@
 var gulp           = require('gulp'),
-		// gutil          = require('gulp-util' ),
 		sass           = require('gulp-sass'),
-		// concat         = require('gulp-concat'),
-		// uglify         = require('gulp-uglify'),
-		// cleanCSS       = require('gulp-clean-css'),
 		rename         = require('gulp-rename'),
 		del            = require('del'),
 		imagemin       = require('gulp-imagemin'),
 		cache          = require('gulp-cache'),
 		autoprefixer   = require('gulp-autoprefixer'),
-		// ftp            = require('vinyl-ftp'),
 		rigger         = require('gulp-rigger'),
 		notify         = require("gulp-notify");
 		connect        = require("gulp-connect");
@@ -27,7 +22,11 @@ gulp.task('connect', function(){
 
 gulp.task('js', function() {
 	return gulp.src([
-		'app/libs/jquery/dist/jquery.min.js'
+		'app/libs/jquery/dist/jquery.min.js',
+		'app/libs/twentytwenty-master/js/jquery.twentytwenty.js',
+		'app/libs/twentytwenty-master/js/jquery.event.move.js',
+		'app/libs/slick-1.8.1/slick/slick.min.js',
+		'app/libs/input-mask/jquery.inputmask.js'
 		])
 	.pipe(gulp.dest('app/js'))
 	.pipe(connect.reload());
@@ -38,6 +37,9 @@ gulp.task('js', function() {
 gulp.task('css', function() {
 	return gulp.src([
 		'app/libs/normalize/normalize.css',
+		'app/libs/twentytwenty-master/css/twentytwenty.css',
+		'app/libs/slick-1.8.1/slick/slick.css',
+		'app/libs/slick-1.8.1/slick/slick-theme.css'
 		])
 	.pipe(gulp.dest('app/css'))
 	.pipe(connect.reload());
@@ -100,25 +102,6 @@ gulp.task('build', ['removedist', 'imagemin', 'html', 'sass', 'js', 'css'], func
 		]).pipe(gulp.dest('dist/libs/pgs-panel/'));
 
 });
-
-/*gulp.task('deploy', function() {
-
-	var conn = ftp.create({
-		host:      '188.120.237.166',
-		user:      'admin',
-		password:  'MU82ejBENXU=',
-		parallel:  10,
-		log: gutil.log
-	});
-
-	var globs = [
-	'dist/**',
-	'dist/.htaccess',
-	];
-	return gulp.src(globs, {buffer: false})
-	.pipe(conn.dest('/www/fea.givesale.ru'));
-
-});*/
 
 gulp.task('removedist', function() { return del.sync('dist'); });
 gulp.task('clearcache', function () { return cache.clearAll(); });

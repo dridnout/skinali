@@ -63,7 +63,7 @@
 						<a class="navbar__phone" href="tel:+74991234567">+7 499 123-45-67</a>
 						<a class="navbar__email navbar__small-text" href="mailto:">info@mail.ru</a>
 					</div>
-					<button class="button-o navbar__button">Получить консультацию</button>
+					<button class="button-o navbar__button" data-modal="modal-consult">Получить консультацию</button>
 				</div>
 			</div>
 		</div>
@@ -72,7 +72,7 @@
 			<div class="container">
 				<h1 class="hero__title">Гарантия минимальной цены на скинали</h1>
 				<span class="hero__subtitle">от 3 000 р/м<sup>2</sup></span>
-				<button class="button hero__button">Заказать скинали</button>
+				<a href="#offer" class="button hero__button">Заказать скинали</a>
 			</div>
 			<!-- /.container -->
 		</div>
@@ -81,7 +81,7 @@
 	<!-- /.header -->
 
 <main>
-    <section class="offer bg-secondary">
+    <section class="offer bg-secondary" id="offer">
         <div class="container">
             <div class="offer__block offer-block offer-block_calc-bg">
                 <h2 class="offer__title">Оставьте заявку на расчет</h2>
@@ -90,15 +90,22 @@
                     <div class="form__row">
                         <div class="form__group">
                             <label for="" class="form__label">Вид стекла</label>
-                            <input type="text" class="input form__input">
+                            <input type="text" class="input form__input" name="type" id="select-type" value="С печатью" hidden>
+                            <div class="select form__select">
+                                <div class="select_checked">С печатью</div>
+                                <ul class="select__dropdown">
+                                    <li class="select__option" data-value="С печатью">С печатью</li>
+                                    <li class="select__option" data-value="Без печати">Без печати</li>
+                                </ul>
+                            </div>
                         </div>
                         <div class="form__group">
                             <label for="" class="form__label">Ширина, см</label>
-                            <input type="text" class="input form__input">
+                            <input type="number" class="input form__input">
                         </div>
                         <div class="form__group">
                             <label for="" class="form__label">Высота, см</label>
-                            <input type="text" class="input form__input">
+                            <input type="number" class="input form__input">
                         </div>
                     </div>
                     <!-- ./form__row -->
@@ -557,6 +564,47 @@
     </section>
     <!-- /.section steps -->
 
+    <section class="section before">
+        <div class="container">
+            <h2 class="section-title section__title">До и после</h2>
+            <!-- /.section-title section__title -->
+            <div class="before-slider-wrap">
+                <div class="before-slider">
+                    <div class="before-slider__item">
+                        <div class="before-after">
+                            <img src="img/before-slider/sample-before.png" alt="">
+                            <img src="img/before-slider/sample-after.png" alt="">
+                        </div>
+                    </div>
+                    <!-- /.before-slider__item -->
+                    <div class="before-slider__item">
+                        <div class="before-after">
+                            <img src="img/before-slider/sample-before.png" alt="">
+                            <img src="img/before-slider/sample-after.png" alt="">
+                        </div>
+                    </div>
+                    <!-- /.before-slider__item -->
+                    <div class="before-slider__item">
+                        <div class="before-after">
+                            <img src="img/before-slider/sample-before.png" alt="">
+                            <img src="img/before-slider/sample-after.png" alt="">
+                        </div>
+                    </div>
+                    <!-- /.before-slider__item -->
+                </div>
+                <!-- /.before-slider -->
+                <div class="before-slider-arrows">
+                    <button class="arrow arrow-left"><img src="/img/before-slider/arrow-left.png" alt=""></button>
+                    <button class="arrow arrow-right"><img src="/img/before-slider/arrow-right.png" alt=""></button>
+                </div>
+                <!-- /.before-slider-arrows -->
+            </div>
+            <!-- /.before-slider-wrap -->
+        </div>
+        <!-- /.container -->
+    </section>
+    <!-- /.section before -->
+
     <section class="section reviews">
         <div class="container">
             <h2 class="section-title section__title">Отзывы наших клиентов</h2>
@@ -620,7 +668,7 @@
                             <input type="text" class="input form__input" placeholder="Ваше имя">
                         </div>
                         <div class="form__group">
-                            <input type="text" class="input form__input" placeholder="Ваш телефон">
+                            <input type="tel" class="input form__input" placeholder="Ваш телефон">
                         </div>
                         <div class="form__group">
                             <input type="text" class="input form__input" placeholder="Ваш цена">
@@ -716,7 +764,7 @@
         <div class="container">
             <div class="questions-block">
                 <h3 class="section-title questions__title">Остались вопросы?</h3>
-                <a href="#" class="questions__link">Задайте их менеджеру</a>
+                <a href="#" class="questions__link" data-modal="modal-question">Задайте их менеджеру</a>
             </div>
         </div>
     </section>
@@ -758,18 +806,63 @@
 		</footer>
 
 		<!-- end Footer -->
-
+		<div class="modal" id="modal-consult">
+		    <div class="modal__wrap">
+		        <span class="close" data-close="true">+</span>
+		        <div class="modal-body modal__body">
+		            <h2>Получить консультацию</h2>
+		            <form action="#" class="form modal__form">
+		                <div class="form__row">
+		                    <input type="text" class="input form__input" placeholder="Ваше имя">
+		                </div>
+		                <div class="form-row">
+		                    <input type="tel" class="input form__input" placeholder="Ваш телефон">
+		                </div>
+		                <div class="form-row">
+		                    <input type="submit" value="Отправить" class="button form__button">
+		                </div>
+		            </form>
+		        </div>
+		    </div>
+		</div>
+		
+		<div class="modal" id="modal-question">
+		    <div class="modal__wrap">
+		        <span class="close" data-close="true">+</span>
+		        <div class="modal-body modal__body">
+		            <h2>Задайте нам вопрос</h2>
+		            <form action="#" class="form modal__form">
+		                <div class="form__row">
+		                    <input type="text" class="input form__input" placeholder="Ваше имя">
+		                </div>
+		                <div class="form-row">
+		                    <input type="tel" class="input form__input" placeholder="Ваш телефон">
+		                </div>
+		                <div class="form-row">
+		                    <input type="submit" value="Отправить" class="button form__button">
+		                </div>
+		            </form>
+		        </div>
+		    </div>
+		</div>
 	
 
 	<!-- Styles -->
 	<link rel="stylesheet" href="css/main.min.css">
 	<!-- Дополнительные файлы стилей -->
 	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/twentytwenty.css">
+	<link rel="stylesheet" href="css/slick.css">
+	<!-- <link rel="stylesheet" href="css/slick-theme.css"> -->
 	<!-- End styles -->
 
 
 	<!-- Scripts -->
 	<script src="js/jquery.min.js"></script>
+	<script src="js/jquery.event.move.js"></script>
+	<script src="js/jquery.twentytwenty.js"></script>
+	<script src="js/slick.min.js"></script>
+	<script src="js/jquery.inputmask.js"></script>
 	<script src="js/common.js"></script>
 	<!-- Spikmi -->
 	<script type="text/javascript" src="https://spikmi.com/Widget?Id=485"></script>
